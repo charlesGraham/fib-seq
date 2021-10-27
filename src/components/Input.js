@@ -14,6 +14,7 @@ function Input() {
     function fibSeq(number) {
         let num1 = 0;
         let num2 = 1;
+        let fibSeq = [];
 
         for(let i = 0; i < number; i++) {
             console.log(num1);
@@ -28,7 +29,7 @@ function Input() {
     function calcSequence(someNum, otherNum) {
         //params are start and finish points
         //TODO: determine next number in sequence after someNum
-        
+
     }
 
     return (
