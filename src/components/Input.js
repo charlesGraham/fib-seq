@@ -33,11 +33,16 @@ function Input() {
     }
 
     return (
-        <div clasName="box">
-            <input id="val1" type="text" onChange={handleInput} placeholder="Enter a number!" />
-            <input id="val2" type="text" onChange={handleInput} placeholder="Enter another number!" />
-            <button type="button">GO!</button>
+            <div >
+                <div className="box">
+                    <h3>Please enter two numbers in the fields below:</h3>
+                    <input id="val1" type="text" onChange={handleInput} placeholder="Enter a number!" />
+                    <input id="val2" type="text" onChange={handleInput} placeholder="Enter another number!" />
+                    <button type="button">GO!</button>
+                </div>
+                
         </div>
+        
     )
 }
 
