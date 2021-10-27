@@ -33,7 +33,7 @@ function Input() {
     }
 
     return (
-            <div >
+            <div>
                 <div className="box">
                     <h3>Please enter two numbers in the fields below:</h3>
                     <input id="val1" type="text" onChange={handleInput} placeholder="Enter a number!" />
