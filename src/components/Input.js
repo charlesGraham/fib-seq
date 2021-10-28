@@ -6,6 +6,7 @@ function Input() {
 
     const [start, setStart] = useState(null);
     const [finish, setFinish] = useState(null);
+    const [ready, setReady] = useState(false);
 
     //print fib sequence until finish
     //loop to conosle log output using start as starting point and finish as ending point
@@ -14,7 +15,7 @@ function Input() {
     let getFinish = (e) => setFinish(e.target.value);
 
     let hideInputBox = (e) => {
-        //compile start & finish into endpoints object
+        setReady(true);
 
         //remove input box
         let boxDisplay = document.querySelector('.box');
@@ -26,13 +27,19 @@ function Input() {
             <div>
                 <div className="box">
                     <h3>Please enter two numbers below:</h3>
+                    <form>
+
+                    </form>
                     <div className="calculations">
                         <input type="text" onChange={getStart} placeholder="Enter a number to start!" />
                         <input type="text" onChange={getFinish}  placeholder="Enter another number to finish!" />
                     </div>
                     <button type="submit" onClick={hideInputBox}>GO!</button>
                 </div>
-                <Output beg={start} end={finish} />
+                {ready ?
+                    <Output beg={start} end={finish} /> :
+                    null
+                }
                 
         </div>
         
