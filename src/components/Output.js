@@ -13,7 +13,7 @@ function Output({ data }) {
         let num2 = 1;
         let nextNum;
         
-        for(let i = 0; i <= number; i++) {
+        for(let i = 0; i < number; i++) {
             //test nextNum
             if (nextNum === data.secondVal) {
                 break;
@@ -29,7 +29,7 @@ function Output({ data }) {
     } 
 
     console.log(data);
-    fibSeq(data.secondVal);
+    fibSeq(10);
     console.log(output);
 
     return (
