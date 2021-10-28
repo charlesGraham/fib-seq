@@ -1,7 +1,7 @@
 .box {
     margin: 50px auto;
     width: 400px;
-    height: 200px;
+    height: 350px;
     text-align: center;
     border-radius: 10px;
     background-color: #fff;
@@ -18,12 +18,13 @@
 }
 
 .box > button {
-    padding: 5px 20px;
+    padding: 10px 30px;
     font-size: 16px;
     background-color: #1b2032;
     color: #fff;
     border: none;
     border-radius: 5px;
+    margin: 5px 0;
 }
 
 .box > button:hover {
@@ -33,16 +34,17 @@
 }
 
 .calculations {
-    padding: 10px 75px;
+    padding: 50px;
     display: flex;
     flex-direction: column;
+    padding-bottom: 20px;
 }
 
 .calculations > input {
     display: block;
     margin: 5px 0;
     font-size: 16px;
-    padding: 5px 10px;
+    padding: 10px;
     border-radius: 5px;
     border: 1px solid #5b5b5b;
 }
