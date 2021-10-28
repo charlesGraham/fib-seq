@@ -11,13 +11,11 @@ function Input() {
     //loop to conosle log output using start as starting point and finish as ending point
 
 
-    function getStart(e) {
-        setStart(e.target.value);
-    }
+    let getStart = (e) => setStart(e.target.value);
+    let getFinish = (e) => setFinish(e.target.value);
 
-    function getFinish(e) {
-        setFinish(e.target.value);
-    }
+    console.log(start);
+    console.log(finish);
 
     return (
             <div>
