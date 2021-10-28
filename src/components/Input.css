@@ -24,13 +24,18 @@
     color: #fff;
     border: none;
     border-radius: 5px;
-    margin: 5px 0;
 }
 
 .box > button:hover {
     cursor: pointer;
     background-color: #185ADB;
     color: #fff;
+}
+
+.box > p {
+    padding: 100px 25px;
+    font-size: 24px;
+    text-align: center;
 }
 
 .calculations {
@@ -42,7 +47,7 @@
 
 .calculations > input {
     display: block;
-    margin: 5px 0;
+    margin: 10px;
     font-size: 16px;
     padding: 10px;
     border-radius: 5px;
