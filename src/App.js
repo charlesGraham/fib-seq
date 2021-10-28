@@ -10,8 +10,6 @@ function App() {
     <div className="App">
       <Header />
       <Input />
-      {/*!input ? <Input /> : <Output /> */}
-      <Output />
     </div>
   );
 }

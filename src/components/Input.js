@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Input.css';
+import Output from './Output';
 
 function Input() {
 
@@ -14,10 +15,27 @@ function Input() {
     let getStart = (e) => setStart(e.target.value);
     let getFinish = (e) => setFinish(e.target.value);
 
+    let data = {
+        firstVal: start,
+        secondVal: finish,
+    }
+
     let hideInput = (e) => {
+        //compile start & finish into data object
+        let data = {
+            beginning: start,
+            end: finish,
+        }
+
+        //remove input box
         let thing = document.querySelector('.box');
         thing.remove();
+
+        return data;
     }
+
+    console.log(data);
+
 
     return (
             <div>
@@ -28,8 +46,9 @@ function Input() {
                         <input type="text" onChange={getFinish}  placeholder="Enter another number to finish!" />
                     </div>
                     <button type="submit" onClick={hideInput}>GO!</button>
-                    
                 </div>
+
+                <Output data={data}  />
                 
         </div>
         
