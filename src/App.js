@@ -7,7 +7,7 @@ import Output from './components/Output';
 
 
 //actual fib sequence 
-function fibSeq(number) {
+/* function fibSeq(number) {
   let num1 = 0;
   let num2 = 1;
 
@@ -19,7 +19,7 @@ function fibSeq(number) {
       num1 = num2;
       num2 = nextNum;
     }
-} 
+}  */
 
 
 function App() {
