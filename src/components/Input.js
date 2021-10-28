@@ -4,37 +4,22 @@ import Output from './Output';
 
 function Input() {
 
-    const [start, setStart] = useState(0);
-    const [finish, setFinish] = useState(0);
+    const [start, setStart] = useState(null);
+    const [finish, setFinish] = useState(null);
 
-    //take 2 numbers from user ("start" & "finish")
     //print fib sequence until finish
     //loop to conosle log output using start as starting point and finish as ending point
-
 
     let getStart = (e) => setStart(e.target.value);
     let getFinish = (e) => setFinish(e.target.value);
 
-    let data = {
-        firstVal: start,
-        secondVal: finish,
-    }
-
-    let hideInput = (e) => {
-        //compile start & finish into data object
-        let data = {
-            beginning: start,
-            end: finish,
-        }
+    let hideInputBox = (e) => {
+        //compile start & finish into endpoints object
 
         //remove input box
-        let thing = document.querySelector('.box');
-        thing.remove();
-
-        return data;
+        let boxDisplay = document.querySelector('.box');
+        boxDisplay.style.display = 'none';
     }
-
-    console.log(data);
 
 
     return (
@@ -45,10 +30,9 @@ function Input() {
                         <input type="text" onChange={getStart} placeholder="Enter a number to start!" />
                         <input type="text" onChange={getFinish}  placeholder="Enter another number to finish!" />
                     </div>
-                    <button type="submit" onClick={hideInput}>GO!</button>
+                    <button type="submit" onClick={hideInputBox}>GO!</button>
                 </div>
-
-                <Output data={data}  />
+                <Output beg={start} end={finish} />
                 
         </div>
         
