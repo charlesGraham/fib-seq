@@ -27,9 +27,6 @@ function Input() {
             <div>
                 <div className="box">
                     <h3>Please enter two numbers below:</h3>
-                    <form>
-
-                    </form>
                     <div className="calculations">
                         <input type="text" onChange={getStart} placeholder="Enter a number to start!" />
                         <input type="text" onChange={getFinish}  placeholder="Enter another number to finish!" />
