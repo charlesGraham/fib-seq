@@ -14,8 +14,10 @@ function Input() {
     let getStart = (e) => setStart(e.target.value);
     let getFinish = (e) => setFinish(e.target.value);
 
-    console.log(start);
-    console.log(finish);
+    let hideInput = (e) => {
+        let thing = document.querySelector('.box');
+        thing.remove();
+    }
 
     return (
             <div>
@@ -25,7 +27,7 @@ function Input() {
                         <input type="text" onChange={getStart} placeholder="Enter a number to start!" />
                         <input type="text" onChange={getFinish}  placeholder="Enter another number to finish!" />
                     </div>
-                    <button type="submit">GO!</button>
+                    <button type="submit" onClick={hideInput}>GO!</button>
                     
                 </div>
                 
